@@ -18,7 +18,7 @@ namespace FinTrack_API.Middlewares
             Exception exception,
             CancellationToken cancellationToken)
         {
-            // Registra o erro real no console/log interno da API para o desenvolvedor ver
+            // Registra o erro real no console/log interno da API
             _logger.LogError(exception, "Ocorreu uma exceção não tratada: {Message}", exception.Message);
 
             // Prepara uma resposta amigável e segura usando o padrão ProblemDetails (RFC 7807)
