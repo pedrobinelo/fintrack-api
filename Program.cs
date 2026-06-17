@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 using Scalar.AspNetCore;
 using System.Text;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -44,9 +45,15 @@ builder.Services.AddOpenApi(options =>
 {
     options.AddDocumentTransformer((document, context, cancellationToken) =>
     {
+        // Força HTTPS no servidor
+        document.Servers = new List<OpenApiServer>
+        {
+            new OpenApiServer { Url = "https://fintrack-api-production-01c5.up.railway.app" }
+        };
+
         document.Components ??= new OpenApiComponents();
         document.Components.SecuritySchemes ??= new Dictionary<string, IOpenApiSecurityScheme>();
-        document.Components.SecuritySchemes["Bearer"]= new OpenApiSecurityScheme
+        document.Components.SecuritySchemes["Bearer"] = new OpenApiSecurityScheme
         {
             Type = SecuritySchemeType.Http,
             Scheme = "bearer",
