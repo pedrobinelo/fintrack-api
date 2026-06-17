@@ -17,11 +17,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+Console.WriteLine($"[DEBUG] Raw connection string: {connectionString?[..Math.Min(50, connectionString.Length)]}...");
+
 if (connectionString != null && connectionString.StartsWith("postgresql://"))
 {
     var uri = new Uri(connectionString);
     var userInfo = uri.UserInfo.Split(':');
     connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true";
+    Console.WriteLine($"[DEBUG] Converted connection string: Host={uri.Host};Port={uri.Port}...");
+}
+else
+{
+    Console.WriteLine($"[DEBUG] Connection string did not match postgresql:// format");
 }
 
 builder.Services.AddDbContext<AppDbContext>(options =>
