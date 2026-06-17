@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using Scalar.AspNetCore;
 using System.Text;
+using Microsoft.AspNetCore.HttpOverrides;
 
 // Habilita o comportamento legado para timestamps do Npgsql, garantindo compatibilidade com versões anteriores
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
@@ -102,14 +103,19 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors();
-
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
 }
 
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedProto
+});
+
+app.UseHttpsRedirection();
+app.UseCors();
 app.UseExceptionHandler(); // Ativa o fluxo de tratamento global
 
 app.MapOpenApi();
