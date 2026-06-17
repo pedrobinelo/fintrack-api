@@ -1,10 +1,10 @@
-﻿using FinTrack_API.DTOs;
-using FinTrack_API.Services;
+﻿using FinTrackAPI.DTOs;
+using FinTrackAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
-namespace FinTrack_API.Controllers
+namespace FinTrackAPI.Controllers
 {
     [ApiController]
     [Route("api/transactions")]

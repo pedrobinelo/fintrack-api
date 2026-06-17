@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace FinTrack_API.Models
+namespace FinTrackAPI.Models
 {
     public class Category
     {

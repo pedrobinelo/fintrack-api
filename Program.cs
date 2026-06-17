@@ -1,6 +1,6 @@
-using FinTrack_API.Data;
-using FinTrack_API.Repositories;
-using FinTrack_API.Services;
+using FinTrackAPI.Data;
+using FinTrackAPI.Repositories;
+using FinTrackAPI.Services;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -80,7 +80,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddExceptionHandler<FinTrack_API.Middlewares.GlobalExceptionHandler>();
+builder.Services.AddExceptionHandler<FinTrackAPI.Middlewares.GlobalExceptionHandler>();
 builder.Services.AddProblemDetails(); // Suporte nativo para respostas padronizadas de erro
 
 var app = builder.Build();

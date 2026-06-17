@@ -1,4 +1,4 @@
-﻿namespace FinTrack_API.DTOs
+﻿namespace FinTrackAPI.DTOs
 {
     public class RegisterDTO
     {

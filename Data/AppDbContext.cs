@@ -1,7 +1,7 @@
-﻿using FinTrack_API.Models;
+﻿using FinTrackAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinTrack_API.Data
+namespace FinTrackAPI.Data
 {
     public class AppDbContext : DbContext
     {

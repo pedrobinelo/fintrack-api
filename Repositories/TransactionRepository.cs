@@ -1,9 +1,9 @@
-﻿using FinTrack_API.DTOs;
-using FinTrack_API.Data;
-using FinTrack_API.Models;
+﻿using FinTrackAPI.DTOs;
+using FinTrackAPI.Data;
+using FinTrackAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinTrack_API.Repositories
+namespace FinTrackAPI.Repositories
 {
     public class TransactionRepository : ITransactionRepository
     {

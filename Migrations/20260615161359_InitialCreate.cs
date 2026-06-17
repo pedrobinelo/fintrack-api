@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace FinTrack_API.Migrations
+namespace FinTrackAPI.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

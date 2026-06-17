@@ -1,9 +1,9 @@
-﻿using FinTrack_API.Data;
-using FinTrack_API.DTOs;
-using FinTrack_API.Models;
+﻿using FinTrackAPI.Data;
+using FinTrackAPI.DTOs;
+using FinTrackAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinTrack_API.Services
+namespace FinTrackAPI.Services
 {
     public class CategoryService
     {

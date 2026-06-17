@@ -1,4 +1,4 @@
-﻿namespace FinTrack_API.Models
+﻿namespace FinTrackAPI.Models
 {
     public class User
     {

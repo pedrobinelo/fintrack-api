@@ -1,10 +1,10 @@
-﻿using FinTrack_API.DTOs;
-using FinTrack_API.Models;
-using FinTrack_API.Repositories;
-using FinTrack_API.Data;
+﻿using FinTrackAPI.DTOs;
+using FinTrackAPI.Models;
+using FinTrackAPI.Repositories;
+using FinTrackAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinTrack_API.Services
+namespace FinTrackAPI.Services
 {
     public class TransactionService
     {

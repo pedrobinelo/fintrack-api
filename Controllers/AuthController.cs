@@ -1,8 +1,8 @@
-﻿using FinTrack_API.DTOs;
-using FinTrack_API.Services;
+﻿using FinTrackAPI.DTOs;
+using FinTrackAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FinTrack_API.Controllers
+namespace FinTrackAPI.Controllers
 {
     [ApiController]
     [Route("api/auth")] // Rota base: api/auth

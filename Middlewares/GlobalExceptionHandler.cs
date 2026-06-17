@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace FinTrack_API.Middlewares
+namespace FinTrackAPI.Middlewares
 {
     public class GlobalExceptionHandler : IExceptionHandler
     {

@@ -1,6 +1,6 @@
-﻿using FinTrack_API.Models;
+﻿using FinTrackAPI.Models;
 
-namespace FinTrack_API.DTOs
+namespace FinTrackAPI.DTOs
 {
     public class TransactionDTO
     {

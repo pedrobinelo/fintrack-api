@@ -1,7 +1,7 @@
-﻿using FinTrack_API.DTOs;
+﻿using FinTrackAPI.DTOs;
 using FluentValidation;
 
-namespace FinTrack_API.Validators
+namespace FinTrackAPI.Validators
 {
     public class LoginDTOValidator : AbstractValidator<LoginDTO>
     {

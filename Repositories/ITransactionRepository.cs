@@ -1,7 +1,7 @@
-﻿using FinTrack_API.DTOs;
-using FinTrack_API.Models;
+﻿using FinTrackAPI.DTOs;
+using FinTrackAPI.Models;
 
-namespace FinTrack_API.Repositories
+namespace FinTrackAPI.Repositories
 {
     public interface ITransactionRepository
     {
