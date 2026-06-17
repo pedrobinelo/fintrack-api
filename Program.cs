@@ -90,7 +90,19 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddExceptionHandler<FinTrackAPI.Middlewares.GlobalExceptionHandler>();
 builder.Services.AddProblemDetails(); // Suporte nativo para respostas padronizadas de erro
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors();
 
 using (var scope = app.Services.CreateScope())
 {
